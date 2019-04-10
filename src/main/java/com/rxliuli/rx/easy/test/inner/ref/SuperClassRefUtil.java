@@ -1,4 +1,4 @@
-package com.rxliuli.rx.easy.test.ref;
+package com.rxliuli.rx.easy.test.inner.ref;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
