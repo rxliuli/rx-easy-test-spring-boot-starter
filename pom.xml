@@ -11,7 +11,7 @@
 
     <groupId>com.rxliuli</groupId>
     <artifactId>rx-easy-test-spring-boot-starter</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 
     <developers>
         <developer>
@@ -29,6 +29,7 @@
         <junit5.version>5.4.1</junit5.version>
         <assertj-core.version>3.11.1</assertj-core.version>
         <random-beans.version>3.8.0</random-beans.version>
+        <objenesis.version>3.0.1</objenesis.version>
     </properties>
 
     <dependencies>
@@ -114,6 +115,11 @@
                 <groupId>org.junit.vintage</groupId>
                 <artifactId>junit-vintage-engine</artifactId>
                 <version>${junit5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.objenesis</groupId>
+                <artifactId>objenesis</artifactId>
+                <version>${objenesis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

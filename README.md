@@ -15,7 +15,7 @@ Spring Boot 测试已经简化了很多，但还是有很多模板注解要写�
   <repository>
     <id>rx-easy-test-spring-boot-starter</id>
     <url>
-      https://raw.githubusercontent.com/rxliuli/rx-easy-test-spring-boot-starter/mvn-repo/repository
+      https://raw.githubusercontent.com/rxliuli/rx-easy-test-spring-boot-starter/mvn-repo
     </url>
   </repository>
 </repositories>
@@ -27,7 +27,7 @@ Spring Boot 测试已经简化了很多，但还是有很多模板注解要写�
 <dependency>
   <groupId>com.rxliuli</groupId>
   <artifactId>rx-easy-test-spring-boot-starter</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.3</version>
   <scope>test</scope>
 </dependency>
 ```
