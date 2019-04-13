@@ -11,14 +11,14 @@ Spring Boot 测试已经简化了很多，但还是有很多模板注解要写�
 添加仓库
 
 ```xml
-<repositories>
-  <repository>
-    <id>rx-easy-test-spring-boot-starter</id>
-    <url>
-      https://raw.githubusercontent.com/rxliuli/rx-easy-test-spring-boot-starter/mvn-repo
-    </url>
-  </repository>
-</repositories>
+<repository>
+  <snapshots>
+    <enabled>false</enabled>
+  </snapshots>
+  <id>central</id>
+  <name>bintray</name>
+  <url>http://jcenter.bintray.com</url>
+</repository>
 ```
 
 复制以下 xml 配置到 `pom.xml` 中即可
