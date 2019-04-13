@@ -9,7 +9,9 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.rxliuli.rx.easy.test.inner.ref.SuperClassRefUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
@@ -37,6 +39,8 @@ import java.util.stream.Collectors;
  * @author rxliuli
  * @date 2018/6/9
  */
+@Rollback
+@Transactional(rollbackFor = Exception.class)
 public abstract class BaseWebTest extends BaseTest {
     /**
      * 提供一个全局可用的序列化 Bean

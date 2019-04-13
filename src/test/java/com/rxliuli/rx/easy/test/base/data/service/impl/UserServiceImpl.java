@@ -30,6 +30,6 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean insertBatch(List<User> userList) {
-        return userList.stream().allMatch(this::insert);
+        return userList.stream().allMatch(user -> userDao.insert(user) > 0);
     }
 }
