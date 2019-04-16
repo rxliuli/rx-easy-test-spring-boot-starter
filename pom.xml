@@ -11,7 +11,8 @@
 
     <groupId>com.rxliuli</groupId>
     <artifactId>rx-easy-test-spring-boot-starter</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
+    <packaging>jar</packaging>
     <description>A simple java tool for spring boot test</description>
 
     <developers>
@@ -35,6 +36,7 @@
         <assertj-core.version>3.11.1</assertj-core.version>
         <random-beans.version>3.8.0</random-beans.version>
         <objenesis.version>3.0.1</objenesis.version>
+        <charset.UTF8>UTF-8</charset.UTF8>
     </properties>
 
     <dependencies>
@@ -135,4 +137,46 @@
             <url>https://api.bintray.com/maven/rxliuli/maven-repo/rx-easy-test-spring-boot-starter/;publish=1</url>
         </repository>
     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>rx-easy-test-spring-boot-starter-sources</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <encoding>${charset.UTF8}</encoding>
+                    <charset>${charset.UTF8}</charset>
+                    <docencoding>${charset.UTF8}</docencoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>rx-easy-test-spring-boot-starter-javadocs</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <!--跳过 docs-lint-->
+                            <additionalOptions>-Xdoclint:none</additionalOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
